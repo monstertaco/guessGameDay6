@@ -9,9 +9,11 @@ var guesses = [];
 				document.getElementById('denmarkPic').height = "200";
 				document.getElementById('denmarkPic').width = "200";
 				document.getElementById('denmarkPic').alt = "Danish flag";
+				document.getElementById('denmark').className = "right";
 			}
 			else {
 				document.getElementById('denmark').innerHTML = "You're wrong " + playerName + " I studied in Denmark in 2010.";
+				document.getElementById('denmark').className = "wrong";
 				guesses.splice(0,1)
 			runQuestionOne();
 			}
@@ -26,9 +28,11 @@ var guesses = [];
 				document.getElementById('fishPic').height = "200";
 				document.getElementById('fishPic').width = "200";
 				document.getElementById('fishPic').alt = "Sad blob fish";
+				document.getElementById('fish').className = "right";
 			}
 			else {
 				document.getElementById('fish').innerHTML = "You're wrong " + playerName + " I don't have any pets right now.";
+				document.getElementById('fish').className = "wrong";
 				guesses.splice(1,1)
 				runQuestionTwo();
 			}
@@ -44,6 +48,7 @@ var guesses = [];
 					document.getElementById('myStatePic').height = "200";
 					document.getElementById('myStatePic').width = "200";
 					document.getElementById('myStatePic').alt = "California outline with flag";
+					document.getElementById('myState').className = "right";
 					break;
 				case'ca':
 					document.getElementById('myState').innerHTML = "Nice job " + playerName + " you got it! I grew up in Southern California.";
@@ -51,19 +56,23 @@ var guesses = [];
 					document.getElementById('myStatePic').height = "200";
 					document.getElementById('myStatePic').width = "200";
 					document.getElementById('myStatePic').alt = "California outline with flag";
+					document.getElementById('myState').className = "right";
 					break;
 				case'oregon':
 					document.getElementById('myState').innerHTML = "HINT: Close, but it's one state further South.";
+					document.getElementById('myState').className = "wrong";
 					guesses.splice(2,1)
 					runQuestionThree();
 					break;
 				case'washington':
 					document.getElementById('myState').innerHTML = "HINT: Nope, my home state is further South.";
+					document.getElementById('myState').className = "wrong";
 					guesses.splice(2,1)
 					runQuestionThree();
 					break;
 				default:
 					document.getElementById('myState').innerHTML = "HINT: It's a state on the West Coast.";
+					document.getElementById('myState').className = "wrong";
 					guesses.splice(2,1)
 					runQuestionThree();
 			}
